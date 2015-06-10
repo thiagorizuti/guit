@@ -1,0 +1,23 @@
+class user
+{
+    primary key int id;
+    string[20] name;
+    string[20] lastname;
+    string[20] phonenumber;
+    string[20] username;
+    string[20] password;
+    string[20] email;
+
+
+}
+
+class badge{
+    primary key int id;
+    string[20] url;
+}
+
+class user_earns_badge{
+    primary key int id;
+    user user;
+    badge badge;
+}
