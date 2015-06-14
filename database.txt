@@ -7,8 +7,9 @@ class user
     string[20] username;
     string[20] password;
     string[20] email;
-
-
+    int points;
+    datetime lastaccess;
+    boolean isadmin;
 }
 
 class badge{
@@ -20,4 +21,27 @@ class user_earns_badge{
     primary key int id;
     user user;
     badge badge;
+}
+
+class teachingpractice{
+    primary key int id;
+    user author;
+    string[20] title;
+    datetime date;
+    memo problemstatement;
+    memo thisbundle;
+    memo wayitworks;
+    memo worksbetter;
+    memo doesntwork;
+    memo doesntworkunless;
+    memo workedif;
+    memo variations;
+    memo solutionstatement;
+}
+
+class user_comments_teachingpractice{
+    user user;
+    teachingpractice teachingpractice;
+    datetime timestamp;
+    memo comment;
 }
