@@ -1,5 +1,4 @@
-class user
-{
+class user{
     primary key int id;
     string[20] name;
     string[20] lastname;
@@ -7,9 +6,16 @@ class user
     string[20] username;
     string[20] password;
     string[20] email;
+    string[20] specialization;
     int points;
-    datetime lastaccess;
+    date lastaccess;
+    date joindate;
     boolean isadmin;
+}
+
+class admin{
+    primary key int id;
+    string[20] role;
 }
 
 class badge{
@@ -23,11 +29,18 @@ class user_earns_badge{
     badge badge;
 }
 
+class message{
+    primary key int id;
+    user user;
+    user user;
+    datetime time;
+}
+
 class teachingpractice{
     primary key int id;
     user author;
     string[20] title;
-    datetime date;
+    datetime time;
     memo problemstatement;
     memo thisbundle;
     memo wayitworks;
@@ -40,8 +53,22 @@ class teachingpractice{
 }
 
 class user_comments_teachingpractice{
+    primary key int id;
     user user;
     teachingpractice teachingpractice;
-    datetime timestamp;
+    datetime time;
     memo comment;
+}
+
+class user_likes_teachingpractice{
+    primary key int id;
+    user user;
+    teachingpractice teachingpractice;
+    datetime time;
+}
+
+class help_documentation{
+    primary key int id;
+    admin admin;
+    datetime time;
 }
