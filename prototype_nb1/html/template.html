@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"/>
+		<title><%section name="pagetitle"%></title>
+		<link rel="stylesheet" type="text/css" media="Screen" href="html/uog.css" />
+<!-- CDN hosted by Cachefly -->
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>tinymce.init({selector:'textarea'});</script>
+    </head>
+	<body>
+		<div id="outerContainer">
+			<div id="innerContainer">
+				<div id="pageHeader">
+					<div id="branding">
+						<img src="http://www.gla.ac.uk/0t4/generic/images/logo_print.gif" alt="Logo" id="logo"/>
+						<div id="sitename">
+							<a href="<%section name="homeURL"%>" title="Return to the home page" rel="home">University of Glasgow</a>
+						</div>
+					</div>
+					<%section name="modechoice" div_id="modechoice"%>
+				</div>
+				<div id="main">
+					<%section name="breadcrumb" div_id="breadcrumb"%>
+					<%section name="sideLinks" div_id="links"%>
+                    <div id="content">
+						<%section name="headings"%>
+	          			<%section name="loginBox" div_id="loginBox"%>
+	                    <%section name="coursesBlock" div_id="coursesBlock"%>
+	                    <%section name="sideInfo" div_id="linksArea"%>
+			  			<%section name="mainBody"%>
+                    </div>
+                    <%section name="logoutLink" div_id="logoutLink"%>
+				</div>
+				<!-- navigation object : 0k Generic Footer addres -->
+				
+ <div class="footer" id="pageFooter">
+
+				<div class="contact">
+					<div class="vcard">
+						<div class="fn org">University <em>of</em> Glasgow</div>
+						<div class="adr">
+							<!-- <span class="street-address">10 The Square</span>, -->
+							<span class="locality">Glasgow</span>, <span class="postal-code">G12 8QQ</span>, <span class="country-name">Scotland</span>
+						</div>
+						<div class="phoneEmail">Tel
+          <dl class="tel"><dd>+44 (0) 141 330 2000,</dd></dl>
+							<a href="http://www.gla.ac.uk/about/contact/">contact us</a>
+							<br/>
+							<a href="http://www.gla.ac.uk/about/maps/">Maps and travel</a>
+							<br/>
+							<br/>
+The University of Glasgow is a registered Scottish charity: registration number SC004401<br/>
+							<a href="http://www.gla.ac.uk/about/contact/">Contact</a>
+						</div>
+					</div>
+				</div>
+				<!-- navigation object : 0k Generic Footer links -->
+				<ul>
+					<li id="fPageId1">
+						<a href="http://www.gla.ac.uk/about/accessibility/">Accessibility</a>
+					</li>
+					<li id="fPageId2">
+						<a href="http://www.gla.ac.uk/legal/disclaimer/">Disclaimer</a>
+					</li>
+					<li id="fPageId3">
+						<a href="http://www.gla.ac.uk/foi/">Freedom of information</a>
+					</li>
+					<li id="fPageId4">
+						<a href="http://www.gla.ac.uk/legal/freedomofinformation/foipublicationscheme/">FOI publication scheme</a>
+					</li>
+					<li id="fPageId5">
+						<a href="http://www.gla.ac.uk/legal/privacy/">Privacy and cookies</a>
+					</li>
+					<li id="fPageId6">
+						<a href="http://www.gla.ac.uk/legal/copyright/">&copy; UofG</a>
+						<br/>&nbsp;</li>
+					<li id="fPageId7">
+						<a href="http://www.gla.ac.uk/students/">Information for current students</a> | <a href="http://www.gla.ac.uk/students/myglasgow/">MyGlasgow for students</a>
+					</li>
+					<li id="fPageId8">
+						<a href="http://www.gla.ac.uk/staff/">Information for staff</a> | <a href="http://www.gla.ac.uk/staff/myglasgow/">MyGlasgow for staff</a>
+						<br/>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+  <%section name="afterContent"%>
+	</body>
+</html>
