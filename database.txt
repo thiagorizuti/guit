@@ -32,7 +32,9 @@ class user_earns_badge{
 class message{
     primary key int id;
     user user;
-    user user;
+    user recipiant;
+    memo content;
+    message in_reply_to;
     datetime time;
 }
 
