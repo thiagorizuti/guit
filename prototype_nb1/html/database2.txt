@@ -1,0 +1,83 @@
+class user{
+    primary key int id;
+    string[20] name;
+    string[20] lastname;
+    string[20] phonenumber;
+    string[20] username;
+    string[20] password;
+    string[30] email;
+    string[30] specialization;
+    int points_likes;
+    int points_liked;
+    int points_comments;
+    int points_bundles;
+    date lastaccess;
+    date joindate;
+    boolean isadmin;
+    string[50] avatar;
+}
+
+class admin{
+    primary key int id;
+    string[20] role;
+}
+
+class badge{
+    primary key int id;
+    string[40] url;
+    string[20] category;
+    string[100] about;
+    int points;
+}
+
+class user_earns_badge{
+    primary key int id;
+    user user;
+    badge badge;
+}
+
+class message{
+    primary key int id;
+    user user;
+    user recipiant;
+    memo content;
+    message in_reply_to;
+    datetime time;
+}
+
+class teachingpractice{
+    primary key int id;
+    user author;
+    string[20] title;
+    datetime time;
+    memo problemstatement;
+    memo thisbundle;
+    memo wayitworks;
+    memo worksbetter;
+    memo doesntwork;
+    memo doesntworkunless;
+    memo workedif;
+    memo variations;
+    memo solutionstatement;
+}
+
+class user_comments_teachingpractice{
+    primary key int id;
+    user user;
+    teachingpractice teachingpractice;
+    datetime time;
+    memo comment;
+}
+
+class user_likes_teachingpractice{
+    primary key int id;
+    user user;
+    teachingpractice teachingpractice;
+    datetime time;
+}
+
+class help_documentation{
+    primary key int id;
+    admin admin;
+    datetime time;
+}

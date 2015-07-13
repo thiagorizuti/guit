@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once('config.php');
+
 $template = new templateMerge($TEMPLATE);
 
 $uinfo = checkLoggedInUser();
@@ -20,8 +21,12 @@ if($uinfo==false)
 }
 else
 {
+
 	$template->pageData['mainBody'] = '<pre>'.print_r($uinfo,1).'</pre>';
 	$template->pageData['logoutLink'] = loginBox($uinfo);
+	
+	$template->pageData['sideInfo'] = "<h2> Menu </h2> <br> <a href='/prototype_nb1/main.php'>Main Page</a> <br></br> <a href='/prototype_nb1/badges.php'>Badges</a>";
+
 
 }
 

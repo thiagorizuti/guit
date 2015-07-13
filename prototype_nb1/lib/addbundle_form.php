@@ -130,9 +130,9 @@ class addbundle_form extends nbform
 		$out .= $this->textareaInput('Ways to make it work better', 'worksbetter', $this->worksbetter, $this->validateMessages, 70 , 8);
 		$out .= $this->textareaInput('Things that stip it working', 'doesntwork', $this->doesntwork, $this->validateMessages, 70 , 8);
 		$out .= $this->textareaInput('Requirements', 'doesntworkunless', $this->doesntworkunless, $this->validateMessages, 70 , 8);
-		$out .= $this->textareaInput('workedif', 'workedif', $this->workedif, $this->validateMessages, 70 , 8);
+		$out .= $this->textareaInput('Workedif', 'workedif', $this->workedif, $this->validateMessages, 70 , 8);
 		$out .= $this->textareaInput('Variations', 'variations', $this->variations, $this->validateMessages, 70 , 8);
-		$out .= $this->textareaInput('solutionstatement', 'solutionstatement', $this->solutionstatement, $this->validateMessages, 70 , 8);
+		$out .= $this->textareaInput('Solution Statement', 'solutionstatement', $this->solutionstatement, $this->validateMessages, 70 , 8);
 		$out .= $this->submitInput('submit', 'Add', "Cancel");
 		$out .= $this->formEnd(false);
 		return $out;

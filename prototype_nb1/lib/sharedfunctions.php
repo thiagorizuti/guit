@@ -13,6 +13,7 @@ function getUserRecord($uinfo)
         $dbUser->lastname = $uinfo['sn'];
         $dbUser->email = $uinfo['email'];
         $dbUser->joindate = time();
+	$dbUser->points = 0; //new line
         $dbUser->insert();
     }
     $dbUser->lastaccess = time();

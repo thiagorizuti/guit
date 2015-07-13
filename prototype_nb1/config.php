@@ -17,11 +17,20 @@ $CFG['ldaphost'] = '130.209.13.173';
 // LDAP context or list of contexts
 $CFG['ldapcontext'] = 'o=Gla';
 
+
+$DBCFG['type']='MySQL';
+$DBCFG['host']="localhost"; // Host name
+$DBCFG['username']="root"; // Mysql username
+$DBCFG['password']="root"; // Mysql password
+$DBCFG['db_name']="guit"; // Database name
+
+/*
 // Database settings
 $DBCFG['type']='MySQL';
 $DBCFG['host']="localhost"; // Host name
 $DBCFG['username']="guit"; // Mysql username
 $DBCFG['password']="guit"; // Mysql password
 $DBCFG['db_name']="guit"; // Database name
+*/
 
 ?>

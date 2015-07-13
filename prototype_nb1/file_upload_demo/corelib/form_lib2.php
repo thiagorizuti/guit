@@ -327,7 +327,7 @@ abstract class nbform
 	function textareaInput($caption, $name, $value="", $validateMsgs=null, $width=70, $height=3, $required=false)
 	{
 	    $out = "<div class=\"formfield\">";
-    	$out .= "<label for=\"$name\">$caption";
+    	$out .= "<label for=\"$name\">$caption:";
         if($required)
         	$out .= '<span style="color: Red;">*</span>';
 	    if((is_array($validateMsgs))&&(array_key_exists($name, $validateMsgs)))

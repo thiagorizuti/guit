@@ -23,6 +23,29 @@ function initializeDataBase_()
 	dataConnection::runQuery($query);
 }
 
+function dropAll_(){
+
+	$query = "DROP TABLE user;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE admin;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE badge;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE user_earns_badge;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE message;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE teachingpractice;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE user_comments_teachingpractice;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE user_likes_teachingpractice;";
+	dataConnection::runQuery($query);
+	$query = "DROP TABLE help_documentation;";
+	dataConnection::runQuery($query);	
+
+}
+
 //Skeleton PHP classes for data tables
 
 class user
@@ -195,6 +218,22 @@ class user
 		return $out;
 	}
 	//[[USERCODE_user]] Put code for custom class members in this block.
+	
+	static function findUser($namepart)
+	{
+	    $query = "SELECT * FROM user WHERE name LIKE '%".dataConnection::safe($namepart)."%'";
+	    $query .= ';';
+	    $result = dataConnection::runQuery($query);
+	    if(sizeof($result)!=0)
+	    {
+	        $output = array();
+	        foreach($result as $r)
+	            $output[] = new user($r);
+	        return $output;
+	    }
+	    else
+	        return false;
+	}
 
 	//[[USERCODE_user]] WEnd of custom class members.
 }
