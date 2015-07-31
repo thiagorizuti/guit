@@ -6,9 +6,7 @@ require_once('config.php');
 require_once('lib/database.php');
 require_once('lib/sharedfunctions.php');
 require_once('corelib/dataaccess.php');
-
 require_once('lib/add_comment.php');
-
 
 $template = new templateMerge($TEMPLATE);
 
@@ -16,206 +14,179 @@ $uinfo = checkLoggedInUser();
 $dbUser = getUserRecord($uinfo);
 $userID = $dbUser->id;
 
-$points_likes = 1;
-$points_liked = 2;
-$points_comments = 5;
-$spaces = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-
-
 $template->pageData['pagetitle'] = 'University of Glasgow GUIT';
 $template->pageData['homeURL'] = $_SERVER['PHP_SELF'];
-$template->pageData['breadcrumb'] = "<a href='http://www.gla.ac.uk/'>University of Glasgow</a> | <a href='http://www.gla.ac.uk/services/learningteaching/'>Learning & Teaching Centre</a> ";
-//$template->pageData['breadcrumb'] .= '| <a href="index.php">Abstracts</a> | <a href="admin.php">Admin home</a>';
+$template->pageData['breadcrumb'] .= "<a href='http://www.gla.ac.uk/'>University of Glasgow</a> | <a href='http://www.gla.ac.uk/services/learningteaching/'>Learning & Teaching Centre</a> ";
+
+$template->pageData['sideInfo'] .= "<h2> Menu </h2>";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/index.php'>Home</a> ";
+$template->pageData['sideInfo']	.= "<a class='menuItem' href='/browse.php'>Browse Teaching Practices</a>";
+$template->pageData['sideInfo']	.= "<a class='menuItem' href='/addbundle.php'>New Teaching Practice</a>";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/user_profile.php?profile=$userID'>My Profile</a> ";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/badges.php'>Badges</a>";
+if ($dbUser->isadmin == true) {
+	$template->pageData['sideInfo'] .= "<a href='/manageusers.php'>Manage Users</a>";
+}
+
 if($uinfo==false)
 {
 	header("Location: index.php");
 	exit();
 }
 
-else
-{
-        if(isset($_GET['sessionID']))
-	    $tp_id = $_GET['sessionID'];
-	elseif(isset($_REQUEST['teachingpractice_id']))
-	    $tp_id = $_REQUEST['teachingpractice_id'];
-	else
-            header("Location: index.php");
+else {
+	if (isset($_GET['tpID'])){
+		$tpID = $_GET['tpID'];
+	}if(isset($_POST['commentSubmit'])) {
+		$content = $_POST['commentContent'];
+		$time = date('Y-m-d H:i:s');
+		dataConnection::runQuery("INSERT INTO user_comments_teachingpractice (user_id,
+			teachingpractice_id, time, comment) VALUES ('$userID','$tpID','$time','$content') ");
+	}if(isset($_POST['repliedID'])){
+		$repliedID = $_POST['repliedID'];
+		$content = $_POST['replyContent'.$repliedID];
+		$time = date('Y-m-d H:i:s');
+		dataConnection::runQuery("INSERT INTO user_comments_teachingpractice (user_id,
+			teachingpractice_id, time, comment, reply) VALUES ('$userID','$tpID','$time','$content', '$repliedID') ");
+	}if(isset($_POST['like'])){
+		$authorID = $_POST['$auhtorID'];
+		if($_POST['like'] == 'like'){
+			$time = date('Y-m-d H:i:s');
+			dataConnection::runQuery("INSERT INTO user_likes_teachingpractice (user_id, teachingpractice_id, time)
+			VALUES ('$userID','$tpID','$time') ");
+
+		}if($_POST['like'] == 'unlike'){
+			dataConnection::runQuery("DELETE FROM user_likes_teachingpractice WHERE user_id = '$userID' AND teachingpractice_id = '$tpID'");
+		}
+	}
+
+
 
 	// Teaching Practice
-	    
-	$template->pageData['mainBody'] .= "<h2>Teaching Practice</h2><ul>";
-	
-	$query = "SELECT * FROM teachingpractice WHERE id = '$tp_id';";		
-	$teachingpractice =  dataConnection::runQuery($query);
-	
-	$template->pageData['buttons'] .= "$spaces $spaces $spaces $spaces <a href='view_teaching_practice.php?sessionID=$tp_id&like=true'> <img src='http://us-cms.jotservers.com/uploads/help/document/joey/88_facebook_like_button_big.jpeg' alt = 'like button' height='50' width='80'> </a><br>";
-		    
-		
-		
 
-	if($teachingpractice !== false)
-	    {
-		    foreach($teachingpractice as $t)
-		    {
-		    	// Like button
-			    
-		    	if (isset($_GET['like'])) {
-			    
-			    dataConnection::connect();
-			    
-		    	    $already_liked = mysql_fetch_array(mysql_query("SELECT * FROM user_likes_teachingpractice WHERE user_id = '$userID' AND teachingpractice_id = '$tp_id'"));
-		    	    
-		    	    if ($already_liked == false)
-		    	    {
-				$new_id = 0;
-				
-				$query = mysql_query("SELECT * FROM user_likes_teachingpractice ORDER BY id DESC;");
-				$last_id = mysql_fetch_array($query);
-				if ($last_id != false)
-				{
-					$new_id = ($last_id['id'] + 1);
-				}
-								
-		    	    	$time = strftime("%Y-%m-%d", time());
-					
-		    	    	dataConnection::runQuery("INSERT INTO user_likes_teachingpractice VALUES ('$new_id','$dbUser->id','$tp_id','$time')");
-					
-				dataConnection::runQuery("UPDATE user SET points_likes = (points_likes + $points_likes) WHERE id = $userID;");
-				dataConnection::runQuery("UPDATE user SET points_liked = (points_liked + $points_liked) WHERE id = {$t['author_id']};");		
-		    	    }
-		    	  }
-			      
-			// Printing Teaching Practice
-			      
-			$author = dataConnection::runQuery("SELECT * FROM user WHERE id = '{$t['author_id']}';");
-		    		    
-				foreach($author as $a)    ;
-				{
-			
-			$template->pageData['mainBody'] .= "<b>Author</b>:";
+	$teachingPractice = dataConnection::runQuery("SELECT u.id, u.name, u.lastname, u.username, tp.* FROM user AS u
+		INNER JOIN teachingpractice AS tp ON u.id = tp.author_id WHERE tp.id = '{$tpID}'");
 
-                    $d = dir("images");
-                    $image = 0;
+	$template->pageData['mainBody'] .= "<h2>Teaching Practice</h2>";
+	$template->pageData['mainBody'] .= "<div id='teachingPractice'>";
+	foreach($teachingPractice as $tp) {
 
-                    while (false !== ($entry = $d->read()))
+		$template->pageData['mainBody'] .= "<img src=".getAvatarURL($tp['author_id'])." />";
+		$template->pageData['mainBody'] .= "<a href='/user_profile.php?profile={$tp['author_id']}'>{$tp['name']} {$tp['lastname']} ({$tp['username']})</a>";
+		$template->pageData['mainBody'] .= "{$tp['time']}";
+		$template->pageData['mainBody'] .= "<table>";
+		$template->pageData['mainBody'] .= "<tr><td><h3>{$tp['title']}</h3></td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Problem addressed</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['problemstatement']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Description</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['thisbundle']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>How it works</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['wayitworks']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Ways to make it work better</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['worksbetter']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Things that stip it working</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['doesntwork']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Requirements</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['doesntworkunless']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Worked if</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['workedif']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Variations</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['variations']}</td></tr>";
+		$template->pageData['mainBody'] .= "<tr class='alt'><td>Solution statement</td></tr>";
+		$template->pageData['mainBody'] .= "<tr><td>{$tp['solutionstatement']}</td></tr>";
+		$template->pageData['mainBody'] .= "</table>";
+	}
+	$template->pageData['mainBody'] .= "</div>";
 
-                    {
-
-                        if (strpos($entry, $userID) !== false)
-
-                        {
-
-                            $template->pageData['mainBody'] .= "<img src='images/{$entry}' height='100' width='100'/>";
-                            $image = 1;
-
-                        }
-                    }
-
-                    if ($image == 0) $template->pageData['mainBody'] .= "<br><img src='http://www.gamerguides.com/assets/images/profiles/3/83673-71555-profil-300x189gif.jpg' height='100' width='100'/>";
+	//Like Button
+	$query = "SELECT * FROM user_likes_teachingpractice WHERE teachingpractice_id = '$tpID'";
+	$likes =  dataConnection::runQuery($query);
+	$count = 0;
+	$liked = false;
+	foreach($likes as $l){
+		$count++;
+		if ($l['user_id'] == $userID){
+			$liked = true;
+		}
+	}
+	if($liked == false){
+		$template->pageData['mainBody'] .= "<form action='' method='post'><input type='image' src='img/like.png' name='like'value='like' style='heigth:50px;width:50px;' /></form>";
+	}else{
+		$template->pageData['mainBody'] .= "<form action='' method='post'><input type='image' src='img/liked.png' name='like'value='unlike' style='heigth:50px;width:50px;' /></form>";
+		$template->pageData['mainBody'] .= "You liked this.";
+	}
+	$template->pageData['mainBody'] .= "<br>{$count} likes";
 
 
-                    $template->pageData['mainBody'] .= "<br>{$a['name']} {$a['lastname']} (<a href='/prototype_nb1/user_profile.php?profile={$a['id']}'>{$a['username']}</a>)<br><br>";
-				}
-				
-			$template->pageData['mainBody'] .= "<b>Title</b>: <br>{$t['title']} <br><br>";			
-			$template->pageData['mainBody'] .= "<b>Published time</b>: <br>{$t['time']} <br><br>";
-			$template->pageData['mainBody'] .= "<b>Problem addressed</b>: {$t['problemstatement']} <br>";
-			$template->pageData['mainBody'] .= "<b>Description</b>: {$t['thisbundle']} <br>";
-			$template->pageData['mainBody'] .= "<b>How it works</b>: {$t['wayitworks']} <br>";
-			$template->pageData['mainBody'] .= "<b>Ways to make it work better</b>: {$t['worksbetter']} <br>";
-			$template->pageData['mainBody'] .= "<b>Things that stip it working</b>: {$t['doesntwork']} <br>";
-			$template->pageData['mainBody'] .= "<b>Requirements</b>: {$t['doesntworkunless']} <br>";
-			$template->pageData['mainBody'] .= "<b>Workedif</b>: {$t['workedif']} <br>";
-			$template->pageData['mainBody'] .= "<b>Variations</b>: {$t['variations']} <br>";
-			$template->pageData['mainBody'] .= "<b>Solution statement</b>: {$t['solutionstatement']} <br>";
-		    }
-	    }
-	    $template->pageData['mainBody'] .= "</ul>";
-	    
-	    
-	// Comments
-	
-	$query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tp_id';";		
+
+	//Comments
+	$query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tpID' AND reply IS NULL";
 	$comments =  dataConnection::runQuery($query);
 
-	if($comments != false)
-	{
-	   	 $template->pageData['mainBody'] .= "<h2>Comments:</h2><br>";
-	    	 foreach($comments as $c)
-		    {
-			    $postuser = user::retrieve_user($c['user_id']);		
-			    		    
-		            $template->pageData['mainBody'] .= "<b>User</b>:";
-			
-					$d = dir("images");
-						
-					while (false !== ($entry = $d->read()))
-						
-					{
-						
-						  if (strpos($entry, $postuser->id) !== false)
-						
-						{
-						
-						  	   $template->pageData['mainBody'] .= "<br><img src='images/{$entry}' height='100' width='100'/>";
-						
-						}
-						
-					}
-					
-			$template->pageData['mainBody'] .= "<br> {$postuser->name} {$postuser->lastname} (<a href='/prototype_nb1/user_profile.php?profile={$postuser->id}'>{$postuser->username}</a>) <br><br>";
-			$template->pageData['mainBody'] .= "<b>Time</b>: <br> {$c['time']} <br><br>";
-			$template->pageData['mainBody'] .= "<b>Comment</b>: <br> {$c['comment']} <br><br>";
-		    }
-	}							
-	    
-	    
+	if($comments != false) {
+		$template->pageData['mainBody'] .= "<h2>Comments:</h2>";
+		foreach ($comments as $c) {
+			$template->pageData['mainBody'] .= "<div id='comment'>";
+
+			$postuser = user::retrieve_user($c['user_id']);
+
+			$template->pageData['mainBody'] .= "<img src=" . getAvatarURL($c['user_id']) . "  />";
+
+			$template->pageData['mainBody'] .= "<a href='/prototype_nb1/user_profile.php?profile={$postuser->id}'>{$postuser->name} {$postuser->lastname}({$postuser->username})</a>";
+			$template->pageData['mainBody'] .= "{$c['comment']}";
+			$template->pageData['mainBody'] .= "{$c['time']} ";
+			$template->pageData['mainBody'] .= "<button id='replyButton{$c['id']}'>Reply</button>";
+			$template->pageData['mainBody'] .= "<div id='replyForm{$c['id']}' style='display:none'>";
+			$template->pageData['mainBody'] .= "<form action='' method='post'>
+													<textarea name='replyContent{$c['id']}'></textarea>
+													<input type='hidden' name='repliedID' value='{$c['id']}'/>
+													<input type='submit' name='replySubmit{$c['id']}' value='Comment'/>
+												</form><button id='replyCancel{$c['id']}'>Cancel</button>";
+			$template->pageData['mainBody'] .= "</div>";
+			$template->pageData['mainBody'] .= "<script type='text/javascript'>
+												function swapElements(show,hide) {
+													document.getElementById(show).style.display = 'block';
+													document.getElementById(hide).style.display = 'none';
+												}
+												document.getElementById('replyButton{$c['id']}').addEventListener('click',function(e){
+													swapElements('replyForm{$c['id']}','replyButton{$c['id']}');
+												});
+												document.getElementById('replyCancel{$c['id']}').addEventListener('click',function(e){
+													swapElements('replyButton{$c['id']}','replyForm{$c['id']}');
+												});
+           										</script>";
+			$cID = $c['id'];
+			$query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tpID' AND reply = '$cID'";
+			$replies = dataConnection::runQuery($query);
+
+			foreach ($replies as $r) {
+				$template->pageData['mainBody'] .= "<div id='reply'>";
+
+				$postuser = user::retrieve_user($r['user_id']);
+
+				$template->pageData['mainBody'] .= "<img src=" . getAvatarURL($r['user_id']) . "  />";
+
+				$template->pageData['mainBody'] .= "<a href='/prototype_nb1/user_profile.php?profile={$postuser->id}'>{$postuser->name} {$postuser->lastname}({$postuser->username})</a>";
+				$template->pageData['mainBody'] .= "{$r['comment']}";
+				$template->pageData['mainBody'] .= "{$r['time']} ";
+				$template->pageData['mainBody'] .= "</div>";
+			}
+		}
+	}
+
 	$template->pageData['mainBody'] .= "<h2>Leave a comment:</h2>";
+	$template->pageData['mainBody'] .= "<div id='commentForm'>";
+	$template->pageData['mainBody'] .= "<form action='' method='post'><textarea name='commentContent'></textarea><input type='hidden' name='tpID' value={$tpID}/><input type='submit' name='commentSubmit' value='Comment'/></form>" ;
+	$template->pageData['mainBody'] .= "</div>";
 
-		
-    	//Example of use of form comment
-
-    	$exampleform = new add_comment();
-    	switch($exampleform->getStatus())
-    	{
-    	case FORM_NOTSUBMITTED:
-    	    //$exampleform->setData($existingdata);
-		$exampleform->teachingpractice_id = $tp_id;
-		
-    	    $template->pageData['mainBody'] .= $exampleform->getHtml();
-    	    break;
-    	case FORM_SUBMITTED_INVALID:
-    	    $template->pageData['mainBody'] .= $exampleform->getHtml();
-    	    break;
-    	case FORM_SUBMITTED_VALID:
-    	    $data = new user_comments_teachingpractice();
-    	    $exampleform->getData($data);
-            $data->time = time();
-            $data->user_id = $dbUser->id;
-	    $data->teachingpractice_id = $tp_id;
-            $data->insert();
-	    
-    	    dataConnection::runQuery("UPDATE user SET points_comments = (points_comments + $points_comments) WHERE id = $userID;");
-	    header("Location:view_teaching_practice.php?sessionID=$tp_id");
-    	    break;
-    	case FORM_CANCELED:
-    	    //header('Location:index.php');
-    	    break;
-    	}
-
-    if($dbUser->isadmin){
-        $template->pageData['mainBody'] .= "<form action='deletebundle.php' method='post'><input type='hidden' name='id' value='".$tp_id."'/><input type='submit' value='Delete'></form>";
-    }
-
-
-	    
-
-    $template->pageData['sideInfo'] .= "<h2> Menu </h2> <br> <a href='/prototype_nb1/index.php'>Main Page</a> <br><br> <a href='/prototype_nb1/badges.php'>Badges</a>";
-
-    $template->pageData['logoutLink'] = loginBox($uinfo);
+	$template->pageData['mainBody'] .= "<h3>Administrator Options</h3>	";
+	if($dbUser->isadmin){
+		$template->pageData['mainBody'] .= "<form action='deletebundle.php' method='post'><input type='hidden' name='id' value='".$tpID."'/><input type='submit' value='Delete'></form>";
+	}
 }
 
 
+	$template->pageData['logoutLink'] = loginBox($uinfo);
 
 //if(error_get_last()==null)
     echo $template->render();

@@ -21,4 +21,63 @@ function getUserRecord($uinfo)
     return $dbUser;
 }
 
+function getAvatarURL($userID){
+    if (file_exists("img/avatar_{$userID}.jpeg")){
+        $avatar= "img/avatar_{$userID}.jpeg";
+    }else if (file_exists("img/avatar_{$userID}.jpg")){
+        $avatar= "img/avatar_{$userID}.jpg";
+    }else if (file_exists("img/avatar_{$userID}.png")){
+        $avatar= "img/avatar_{$userID}.png";
+    }else{
+        $avatar= "img/avatar_0.jpeg";
+    }
+    return $avatar;
+}
+
+function likePoints($userID)
+{
+    $result = dataConnection::runQuery("SELECT user_id FROM user_likes_teachingpractice WHERE user_id = '$userID' ");
+    $count = 0;
+    foreach ($result as $r) {
+        $count++;
+    }
+    return $count;
+
+}
+
+function likedPoints($userID){
+    $result =  dataConnection::runQuery("SELECT * FROM user_likes_teachingpractice, teachingpractice WHERE
+      teachingpractice.author_id = '$userID' AND teachingpractice.id = user_likes_teachingpractice.teachingpractice_id");
+    $count = 0;
+    foreach($result as $r){
+        $count++;
+    }
+    return $count*2;
+}
+
+function commentPoints($userID){
+    $result =  dataConnection::runQuery("SELECT user_id FROM user_comments_teachingpractice WHERE user_id = '$userID' ");
+    $count = 0;
+    foreach($result as $r){
+        $count++;
+    }
+    return $count*5;
+}
+
+function postPoints($userID){
+    $result =  dataConnection::runQuery("SELECT author_id FROM teachingpractice WHERE author_id = '$userID' ");
+    $count = 0;
+    foreach($result as $r){
+        $count++;
+    }
+    return $count*10;
+}
+
+function totalPoints($userID){
+    return likePoints($userID) + likedPoints($userID) +  commentPoints($userID) + postPoints($userID);
+}
+
+?>
+
+
 

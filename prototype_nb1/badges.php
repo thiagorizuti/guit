@@ -11,11 +11,22 @@ $template = new templateMerge($TEMPLATE);
 
 $uinfo = checkLoggedInUser();
 $dbUser = getUserRecord($uinfo);
+$userID = $dbUser->id;
 
-$template->pageData['pagetitle'] = 'University of Glasgow '; //# append conference name
+$template->pageData['pagetitle'] = 'University of Glasgow ';
 $template->pageData['homeURL'] = $_SERVER['PHP_SELF'];
 $template->pageData['breadcrumb'] = "<a href='http://www.gla.ac.uk/'>University of Glasgow</a> | <a href='http://www.gla.ac.uk/services/learningteaching/'>Learning & Teaching Centre</a> ";
-//$template->pageData['breadcrumb'] .= '| <a href="index.php">Abstracts</a> | <a href="admin.php">Admin home</a>';
+
+$template->pageData['sideInfo'] .= "<h2> Menu </h2>";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/index.php'>Home</a> ";
+$template->pageData['sideInfo']	.= "<a class='menuItem' href='/browse.php'>Browse Teaching Practices</a>";
+$template->pageData['sideInfo']	.= "<a class='menuItem' href='/addbundle.php'>New Teaching Practice</a>";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/user_profile.php?profile=$userID'>My Profile</a> ";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/badges.php'>Badges</a>";
+if ($dbUser->isadmin == true) {
+	$template->pageData['sideInfo'] .= "<a href='/manageusers.php'>Manage Users</a>";
+}
+
 if($uinfo==false)
 {
 	header("Location: index.php");
@@ -58,7 +69,6 @@ else
 	$template->pageData['logoutLink'] = loginBox($uinfo);
 	
 	
-	$template->pageData['sideInfo'] = "<h2> Menu </h2> <br> <a href='/prototype_nb1/index.php'>Main Page</a>";
 
 
 }

@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dac25b31-72bc-40c1-abec-53129cbdf35e" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/Site-Map.pptx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/images/img_3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/images/img_9.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/loginpage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/test.lol" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/prototype_nb1/test.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/addbundle.php" afterPath="$PROJECT_DIR$/prototype_nb1/addbundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/badges.php" afterPath="$PROJECT_DIR$/prototype_nb1/badges.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/database2.txt" afterPath="$PROJECT_DIR$/doc/database2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/index.php" afterPath="$PROJECT_DIR$/prototype_nb1/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/manageusers.php" afterPath="$PROJECT_DIR$/prototype_nb1/manageusers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/lib/sharedfunctions.php" afterPath="$PROJECT_DIR$/prototype_nb1/lib/sharedfunctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/html/template.html" afterPath="$PROJECT_DIR$/prototype_nb1/html/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/html/uog.css" afterPath="$PROJECT_DIR$/prototype_nb1/html/uog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/user_profile.php" afterPath="$PROJECT_DIR$/prototype_nb1/user_profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php" afterPath="$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php" />
+    </list>
+    <ignored path="guit.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="guit" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="database2.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doc/database2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31707317">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-743.125">
+              <caret line="1189" column="2" selection-start-line="1189" selection-start-column="2" selection-end-line="1189" selection-end-column="2" />
+              <folding>
+                <marker date="1437056869000" expanded="true" signature="91:368" placeholder="CREATE TABLE..user..." />
+                <marker date="1437056869000" expanded="true" signature="418:493" placeholder="CREATE TABLE..admin..." />
+                <marker date="1437056869000" expanded="true" signature="543:617" placeholder="CREATE TABLE..badge..." />
+                <marker date="1437056869000" expanded="true" signature="667:770" placeholder="CREATE TABLE..user_earns_badge..." />
+                <marker date="1437056869000" expanded="true" signature="820:911" placeholder="CREATE TABLE..message..." />
+                <marker date="1437056869000" expanded="true" signature="961:1253" placeholder="CREATE TABLE..teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="1303:1460" placeholder="CREATE TABLE..user_comments_teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="1510:1650" placeholder="CREATE TABLE..user_likes_teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="1700:1803" placeholder="CREATE TABLE..help_documentation..." />
+                <marker date="1437056869000" expanded="true" signature="1878:1893" placeholder="DROP TABLE u..." />
+                <marker date="1437056869000" expanded="true" signature="1943:1959" placeholder="DROP TABLE a..." />
+                <marker date="1437056869000" expanded="true" signature="2009:2025" placeholder="DROP TABLE b..." />
+                <marker date="1437056869000" expanded="true" signature="2075:2102" placeholder="DROP TABLE u..." />
+                <marker date="1437056869000" expanded="true" signature="2152:2170" placeholder="DROP TABLE m..." />
+                <marker date="1437056869000" expanded="true" signature="2220:2247" placeholder="DROP TABLE t..." />
+                <marker date="1437056869000" expanded="true" signature="2297:2338" placeholder="DROP TABLE u..." />
+                <marker date="1437056869000" expanded="true" signature="2388:2426" placeholder="DROP TABLE u..." />
+                <marker date="1437056869000" expanded="true" signature="2476:2505" placeholder="DROP TABLE h..." />
+                <marker date="1437056869000" expanded="true" signature="3853:3912" placeholder="SELECT * FRO..user..." />
+                <marker date="1437056869000" expanded="true" signature="4120:4191" placeholder="SELECT * FRO..user..." />
+                <marker date="1437056869000" expanded="true" signature="4544:4610" placeholder="SELECT * FRO..user..." />
+                <marker date="1437056869000" expanded="true" signature="5213:5348" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="7296:7336" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="8622:8696" placeholder="SELECT * FRO..user..." />
+                <marker date="1437056869000" expanded="true" signature="9374:9434" placeholder="SELECT * FRO..admin..." />
+                <marker date="1437056869000" expanded="true" signature="9789:9856" placeholder="SELECT * FRO..admin..." />
+                <marker date="1437056869000" expanded="true" signature="10460:10491" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="11105:11146" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="12064:12124" placeholder="SELECT * FRO..badge..." />
+                <marker date="1437056869000" expanded="true" signature="12479:12546" placeholder="SELECT * FRO..badge..." />
+                <marker date="1437056869000" expanded="true" signature="13150:13180" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="13791:13832" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="15032:15103" placeholder="SELECT * FRO..user_earns_badge..." />
+                <marker date="1437056869000" expanded="true" signature="15480:15558" placeholder="SELECT * FRO..user_earns_badge..." />
+                <marker date="1437056869000" expanded="true" signature="16173:16228" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="17113:17165" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="18382:18444" placeholder="SELECT * FRO..message..." />
+                <marker date="1437056869000" expanded="true" signature="18803:18872" placeholder="SELECT * FRO..message..." />
+                <marker date="1437056869000" expanded="true" signature="19478:19520" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="20330:20373" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="22538:22609" placeholder="SELECT * FRO..teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="22986:23064" placeholder="SELECT * FRO..teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="23679:23865" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="26111:26163" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="28532:28617" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="29022:29114" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="29743:29838" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="31036:31102" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="32796:32878" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="33277:33366" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+                <marker date="1437056869000" expanded="true" signature="33992:34075" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="35141:35204" placeholder="SELECT COUNT..." />
+                <marker date="1437056869000" expanded="true" signature="36593:36666" placeholder="SELECT * FRO..help_documentation..." />
+                <marker date="1437056869000" expanded="true" signature="37047:37127" placeholder="SELECT * FRO..help_documentation..." />
+                <marker date="1437056869000" expanded="true" signature="37744:37798" placeholder="INSERT INTO ..." />
+                <marker date="1437056869000" expanded="true" signature="38623:38677" placeholder="SELECT COUNT..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/doc/database2.txt" />
+        <option value="$PROJECT_DIR$/prototype_nb1/html/test.html" />
+        <option value="$PROJECT_DIR$/prototype_nb1/lib/browse.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/badges.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/browse.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/manageusers.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/html/template.html" />
+        <option value="$PROJECT_DIR$/prototype_nb1/html/uog.css" />
+        <option value="$PROJECT_DIR$/prototype_nb1/addbundle.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/index.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/lib/sharedfunctions.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/user_profile.php" />
+        <option value="$PROJECT_DIR$/prototype_nb1/uploadAvatar.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="712" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype_nb1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prototype_nb1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prototype_nb1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dac25b31-72bc-40c1-abec-53129cbdf35e" name="Default" comment="" />
+      <created>1437066372567</created>
+      <option name="number" value="Default" />
+      <updated>1437066372567</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT u.id,..user..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/add_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/uog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="352" column="20" selection-start-line="352" selection-start-column="20" selection-end-line="352" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/sharedfunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT user_..user_likes_teachingpractice..." />
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT user_..user_comments_teachingpractice..." />
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT autho..teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="92" selection-start-line="36" selection-start-column="92" selection-end-line="36" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/badges.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/browse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/addbundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="88" selection-start-line="23" selection-start-column="88" selection-end-line="23" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/user_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/manageusers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="88" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
+          <folding>
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT u.id,..user..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/uog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+          <folding>
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT u.id,..user..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/addbundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/uog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="346" column="18" selection-start-line="346" selection-start-column="18" selection-end-line="346" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="90" selection-start-line="109" selection-start-column="90" selection-end-line="109" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+          <folding>
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT u.id,..user..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/addbundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/uog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="346" column="18" selection-start-line="346" selection-start-column="18" selection-end-line="346" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="90" selection-start-line="109" selection-start-column="90" selection-end-line="109" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/corelib/form_lib2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4974619">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12690355">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/drop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/initialise.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/addbundle_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8172588">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/genericpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12690355">
+          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/add_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2690356">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/html/uog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="368" column="18" selection-start-line="368" selection-start-column="18" selection-end-line="368" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/badges.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8020304">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1437955247000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..badge..." />
+            <marker date="1437955247000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..badge..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/browse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2284264">
+          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/addbundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7106599">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <marker date="1438166118000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1438166118000" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/manageusers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.9543147">
+          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+          <folding>
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437956704000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/deletebundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35532996">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/sharedfunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.875">
+          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+          <folding>
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT user_..user_likes_teachingpractice..." />
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT user_..user_comments_teachingpractice..." />
+            <marker date="1438350293000" expanded="true" signature="-1:-1" placeholder="SELECT autho..teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.352941">
+          <caret line="68" column="63" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
+          <folding>
+            <marker date="1438273735000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438273735000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..badge..." />
+            <marker date="1438273735000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/file_upload_demo/lib/uploadForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/file_upload_demo/corelib/form_lib2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437056869000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/uploadAvatar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8121827">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/user_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5431472">
+          <caret line="52" column="340" selection-start-line="52" selection-start-column="340" selection-end-line="52" selection-end-column="340" />
+          <folding>
+            <marker date="1438350559000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/view_teaching_practice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3147208">
+          <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="96" />
+          <folding>
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT u.id,..user..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1438270952000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/corelib/dataaccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4365482">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/guldap_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype_nb1/lib/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-743.125">
+          <caret line="1189" column="2" selection-start-line="1189" selection-start-column="2" selection-end-line="1189" selection-end-column="2" />
+          <folding>
+            <marker date="1437056869000" expanded="true" signature="91:368" placeholder="CREATE TABLE..user..." />
+            <marker date="1437056869000" expanded="true" signature="418:493" placeholder="CREATE TABLE..admin..." />
+            <marker date="1437056869000" expanded="true" signature="543:617" placeholder="CREATE TABLE..badge..." />
+            <marker date="1437056869000" expanded="true" signature="667:770" placeholder="CREATE TABLE..user_earns_badge..." />
+            <marker date="1437056869000" expanded="true" signature="820:911" placeholder="CREATE TABLE..message..." />
+            <marker date="1437056869000" expanded="true" signature="961:1253" placeholder="CREATE TABLE..teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="1303:1460" placeholder="CREATE TABLE..user_comments_teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="1510:1650" placeholder="CREATE TABLE..user_likes_teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="1700:1803" placeholder="CREATE TABLE..help_documentation..." />
+            <marker date="1437056869000" expanded="true" signature="1878:1893" placeholder="DROP TABLE u..." />
+            <marker date="1437056869000" expanded="true" signature="1943:1959" placeholder="DROP TABLE a..." />
+            <marker date="1437056869000" expanded="true" signature="2009:2025" placeholder="DROP TABLE b..." />
+            <marker date="1437056869000" expanded="true" signature="2075:2102" placeholder="DROP TABLE u..." />
+            <marker date="1437056869000" expanded="true" signature="2152:2170" placeholder="DROP TABLE m..." />
+            <marker date="1437056869000" expanded="true" signature="2220:2247" placeholder="DROP TABLE t..." />
+            <marker date="1437056869000" expanded="true" signature="2297:2338" placeholder="DROP TABLE u..." />
+            <marker date="1437056869000" expanded="true" signature="2388:2426" placeholder="DROP TABLE u..." />
+            <marker date="1437056869000" expanded="true" signature="2476:2505" placeholder="DROP TABLE h..." />
+            <marker date="1437056869000" expanded="true" signature="3853:3912" placeholder="SELECT * FRO..user..." />
+            <marker date="1437056869000" expanded="true" signature="4120:4191" placeholder="SELECT * FRO..user..." />
+            <marker date="1437056869000" expanded="true" signature="4544:4610" placeholder="SELECT * FRO..user..." />
+            <marker date="1437056869000" expanded="true" signature="5213:5348" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="7296:7336" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="8622:8696" placeholder="SELECT * FRO..user..." />
+            <marker date="1437056869000" expanded="true" signature="9374:9434" placeholder="SELECT * FRO..admin..." />
+            <marker date="1437056869000" expanded="true" signature="9789:9856" placeholder="SELECT * FRO..admin..." />
+            <marker date="1437056869000" expanded="true" signature="10460:10491" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="11105:11146" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="12064:12124" placeholder="SELECT * FRO..badge..." />
+            <marker date="1437056869000" expanded="true" signature="12479:12546" placeholder="SELECT * FRO..badge..." />
+            <marker date="1437056869000" expanded="true" signature="13150:13180" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="13791:13832" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="15032:15103" placeholder="SELECT * FRO..user_earns_badge..." />
+            <marker date="1437056869000" expanded="true" signature="15480:15558" placeholder="SELECT * FRO..user_earns_badge..." />
+            <marker date="1437056869000" expanded="true" signature="16173:16228" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="17113:17165" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="18382:18444" placeholder="SELECT * FRO..message..." />
+            <marker date="1437056869000" expanded="true" signature="18803:18872" placeholder="SELECT * FRO..message..." />
+            <marker date="1437056869000" expanded="true" signature="19478:19520" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="20330:20373" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="22538:22609" placeholder="SELECT * FRO..teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="22986:23064" placeholder="SELECT * FRO..teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="23679:23865" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="26111:26163" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="28532:28617" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="29022:29114" placeholder="SELECT * FRO..user_comments_teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="29743:29838" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="31036:31102" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="32796:32878" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="33277:33366" placeholder="SELECT * FRO..user_likes_teachingpractice..." />
+            <marker date="1437056869000" expanded="true" signature="33992:34075" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="35141:35204" placeholder="SELECT COUNT..." />
+            <marker date="1437056869000" expanded="true" signature="36593:36666" placeholder="SELECT * FRO..help_documentation..." />
+            <marker date="1437056869000" expanded="true" signature="37047:37127" placeholder="SELECT * FRO..help_documentation..." />
+            <marker date="1437056869000" expanded="true" signature="37744:37798" placeholder="INSERT INTO ..." />
+            <marker date="1437056869000" expanded="true" signature="38623:38677" placeholder="SELECT COUNT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/database2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31707317">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

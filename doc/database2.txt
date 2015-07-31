@@ -67,6 +67,7 @@ class user_comments_teachingpractice{
     teachingpractice teachingpractice;
     datetime time;
     memo comment;
+    user_comments_teachingpractice reply;
 }
 
 class user_likes_teachingpractice{

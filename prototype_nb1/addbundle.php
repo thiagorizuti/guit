@@ -5,19 +5,29 @@ error_reporting(E_ALL);
 require_once('config.php');
 require_once('lib/database.php');
 require_once('lib/sharedfunctions.php');
-$template = new templateMerge($TEMPLATE);
-
 require_once('lib/addbundle_form.php');
+
+$template = new templateMerge($TEMPLATE);
 
 $uinfo = checkLoggedInUser();
 $dbUser = getUserRecord($uinfo);
-
-$points_bundles = 10; // sets points received for posting a bundle
+$userID = $dbUser->id;
 
 $template->pageData['pagetitle'] = 'University of Glasgow GUIT';
 $template->pageData['homeURL'] = $_SERVER['PHP_SELF'];
 $template->pageData['breadcrumb'] = "<a href='http://www.gla.ac.uk/'>University of Glasgow</a> | <a href='http://www.gla.ac.uk/services/learningteaching/'>Learning & Teaching Centre</a> ";
-$template->pageData['breadcrumb'] .= '| <a href="index.php">GUIT</a>';
+
+$template->pageData['sideInfo'] .= "<h2> Menu </h2>";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/index.php'>Home</a> ";
+$template->pageData['sideInfo']	.= "<a class='menuItem' href='/browse.php'>Browse Teaching Practices</a>";
+$template->pageData['sideInfo']	.= "<a class='menuItem' href='/addbundle.php'>New Teaching Practice</a>";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/user_profile.php?profile=$userID'>My Profile</a> ";
+$template->pageData['sideInfo'] .= "<a class='menuItem' href='/badges.php'>Badges</a>";
+if ($dbUser->isadmin == true) {
+	$template->pageData['sideInfo'] .= "<a class='menuItem' href='/manageusers.php'>Manage Users</a>";
+}
+
+
 if($uinfo==false)
 {
 	header("Location: index.php");
@@ -25,8 +35,7 @@ if($uinfo==false)
 }
 else
 {
-	//$template->pageData['sideInfo'] = "<h2> Menu </h2> <br> <a href='/prototype_nb1/index.php'>Main Page</a>";
-	
+
 	//Example of use of form addbundle_form
 	$exampleform = new addbundle_form();
 	switch($exampleform->getStatus())
@@ -62,9 +71,7 @@ else
 	    header('Location:index.php');
 	    break;
 	}
-	
-	$template->pageData['sideInfo'] = "<h2> Menu </h2> <br> <a href='/prototype_nb1/index.php'>Main Page</a> <br> <a href='/prototype_nb1/badges.php'>Badges</a>";
-		
+
 	$template->pageData['logoutLink'] = loginBox($uinfo);
 	
 }
