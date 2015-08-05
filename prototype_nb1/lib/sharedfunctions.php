@@ -77,6 +77,10 @@ function totalPoints($userID){
     return likePoints($userID) + likedPoints($userID) +  commentPoints($userID) + postPoints($userID);
 }
 
+function getBadgeURL($badgeID){
+    return "img/badge_{$badgeID}.png";
+}
+
 ?>
 
 

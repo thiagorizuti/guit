@@ -49,9 +49,9 @@ else
 	if($badges != false){
 			foreach($badges as $b)
 			{
-				$template->pageData['mainBody'] .= "<img src = {$b['url']} alt = 'badge'>";
+				$badgeID = 	($b['badge_id']);
+				$template->pageData['mainBody'] .= "<img src='img/badge_{$badgeID}.png' width=100px  /> <br>{$b['about']}<br>";
 			}
-			$template->pageData['mainBody'] .= "<br><br>";
 	}
 	else{
 		$template->pageData['mainBody'] .= "You do not have any badges yet.";

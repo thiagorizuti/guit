@@ -76,24 +76,38 @@ else {
 		$template->pageData['mainBody'] .= "{$tp['time']}";
 		$template->pageData['mainBody'] .= "<table>";
 		$template->pageData['mainBody'] .= "<tr><td><h3>{$tp['title']}</h3></td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Problem addressed</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['problemstatement']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Description</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['thisbundle']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>How it works</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['wayitworks']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Ways to make it work better</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['worksbetter']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Things that stip it working</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['doesntwork']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Requirements</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['doesntworkunless']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Worked if</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['workedif']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Variations</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['variations']}</td></tr>";
-		$template->pageData['mainBody'] .= "<tr class='alt'><td>Solution statement</td></tr>";
-		$template->pageData['mainBody'] .= "<tr><td>{$tp['solutionstatement']}</td></tr>";
+		if($tp['problemstatement']!= false){
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>Keywords:</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['problemstatement']}</td></tr>";
+		}
+		if($tp['wayitworks']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>This bundle: </td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['wayitworks']}</td></tr>";
+		}
+		if($tp['worksbetter']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>What we did:</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['worksbetter']}</td></tr>";
+		}
+		if($tp['doesntwork']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>This only works if...</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['doesntwork']}</td></tr>";
+		}
+		if($tp['doesntworkunless']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>This works better if...</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['doesntworkunless']}</td></tr>";
+		}
+		if($tp['workedif']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>This works best if...</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['workedif']}</td></tr>";
+		}
+		if($tp['variations']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>This doesn’t work unless...</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['variations']}</td></tr>";
+		}
+		if($tp['solutionstatement']!= false) {
+			$template->pageData['mainBody'] .= "<tr class='alt'><td>So:</td></tr>";
+			$template->pageData['mainBody'] .= "<tr><td>{$tp['solutionstatement']}</td></tr>";
+		}
 		$template->pageData['mainBody'] .= "</table>";
 	}
 	$template->pageData['mainBody'] .= "</div>";
@@ -171,6 +185,7 @@ else {
 				$template->pageData['mainBody'] .= "{$r['time']} ";
 				$template->pageData['mainBody'] .= "</div>";
 			}
+			$template->pageData['mainBody'] .= "</div>";
 		}
 	}
 
@@ -179,8 +194,10 @@ else {
 	$template->pageData['mainBody'] .= "<form action='' method='post'><textarea name='commentContent'></textarea><input type='hidden' name='tpID' value={$tpID}/><input type='submit' name='commentSubmit' value='Comment'/></form>" ;
 	$template->pageData['mainBody'] .= "</div>";
 
-	$template->pageData['mainBody'] .= "<h3>Administrator Options</h3>	";
+
+
 	if($dbUser->isadmin){
+		$template->pageData['mainBody'] .= "<h3>Administrator Options</h3>	";
 		$template->pageData['mainBody'] .= "<form action='deletebundle.php' method='post'><input type='hidden' name='id' value='".$tpID."'/><input type='submit' value='Delete'></form>";
 	}
 }

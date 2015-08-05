@@ -7,19 +7,10 @@ class user{
     string[20] password;
     string[30] email;
     string[30] specialization;
-    int points_likes;
-    int points_liked;
-    int points_comments;
-    int points_bundles;
     date lastaccess;
     date joindate;
     boolean isadmin;
-    string[50] avatar;
-}
 
-class admin{
-    primary key int id;
-    string[20] role;
 }
 
 class badge{
@@ -34,15 +25,6 @@ class user_earns_badge{
     primary key int id;
     user user;
     badge badge;
-}
-
-class message{
-    primary key int id;
-    user user;
-    user recipiant;
-    memo content;
-    message in_reply_to;
-    datetime time;
 }
 
 class teachingpractice{
@@ -77,8 +59,3 @@ class user_likes_teachingpractice{
     datetime time;
 }
 
-class help_documentation{
-    primary key int id;
-    admin admin;
-    datetime time;
-}

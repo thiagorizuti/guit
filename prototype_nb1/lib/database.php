@@ -42,7 +42,7 @@ function dropAll_(){
 	$query = "DROP TABLE user_likes_teachingpractice;";
 	dataConnection::runQuery($query);
 	$query = "DROP TABLE help_documentation;";
-	dataConnection::runQuery($query);	
+	dataConnection::runQuery($query);
 
 }
 
@@ -218,7 +218,7 @@ class user
 		return $out;
 	}
 	//[[USERCODE_user]] Put code for custom class members in this block.
-	
+
 	static function findUser($namepart)
 	{
 	    $query = "SELECT * FROM user WHERE name LIKE '%".dataConnection::safe($namepart)."%'";
