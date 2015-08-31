@@ -53,16 +53,6 @@ else
         $data->time = time();
         $data->author_id = $dbUser->id;
         $data->insert();
-	
-	/*updates points from posting teaching practices
-	
-	$tempquery = dataConnection::runQuery("SELECT * FROM user WHERE id = '$dbUser->id';");	
-		
-	foreach($tempquery as $t)
-	{
-		dataConnection::runQuery("UPDATE user SET points_bundles = (points_bundles + $points_bundles) WHERE id = '{$t['id']}';");	
-	}*/
-	
 	    // Do stuff with $data
 	    // A redirect is likely here, e.g. header('Location:document.php?id='.$data->id);
 	    header('Location:index.php');

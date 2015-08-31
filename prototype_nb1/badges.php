@@ -37,8 +37,7 @@ else
 	$username = $uinfo['uname'];
 
 	$template->pageData['mainBody'].= "<div id='badges'>";
-	$query = "SELECT * FROM badge, user_earns_badge, user WHERE user_earns_badge.user_id = user.id AND user.username = '$username' AND badge.id = user_earns_badge.badge_id;";
-	$badges =  dataConnection::runQuery($query);
+	$badges =  getEarnedBadges($userID);
 	$template->pageData['mainBody'] .= "<h2>Badges You Have Earned</h2><br>";
 	if($badges != false){
 		foreach($badges as $b)
@@ -54,18 +53,15 @@ else
 
 
 	$template->pageData['mainBody'] .= "<h2>Available Badges</h2><br>";
-	$query = "SELECT * FROM badge;";
-	$badges =  dataConnection::runQuery($query);
+	$badges =  getBadges();
 	foreach($badges as $b)
 	{
 		$badgeID = $b['id'];
 		$template->pageData['mainBody'] .= "<img src='img/badge_{$badgeID}.png' width=100px  /> <br>{$b['about']}<br>";
 		$template->pageData['mainBody'] .= "Points needed to earn: {$b['points']}<br><br>";
 		if(totalPoints($userID) >= $b['points']){
-			$result =  dataConnection::runQuery("SELECT * FROM user_earns_badge WHERE user_id = '$userID' AND  badge_id = '$badgeID'");
-			if($result == false){
-				dataConnection::runQuery("INSERT INTO user_earns_badge (user_id, badge_id) VALUES('$userID','$badgeID')");
-
+			if(!userHasBadge($userID,$badgeID)){
+				userEarnsBadge($userID,$badgeID);
 			}
 		}
 	}

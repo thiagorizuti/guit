@@ -37,26 +37,22 @@ if($uinfo==false)
 else {
 	if (isset($_GET['tpID'])){
 		$tpID = $_GET['tpID'];
-	}if(isset($_POST['commentSubmit'])) {
-		$content = $_POST['commentContent'];
-		$time = date('Y-m-d H:i:s');
-		dataConnection::runQuery("INSERT INTO user_comments_teachingpractice (user_id,
-			teachingpractice_id, time, comment) VALUES ('$userID','$tpID','$time','$content') ");
-	}if(isset($_POST['repliedID'])){
-		$repliedID = $_POST['repliedID'];
-		$content = $_POST['replyContent'.$repliedID];
-		$time = date('Y-m-d H:i:s');
-		dataConnection::runQuery("INSERT INTO user_comments_teachingpractice (user_id,
-			teachingpractice_id, time, comment, reply) VALUES ('$userID','$tpID','$time','$content', '$repliedID') ");
-	}if(isset($_POST['like'])){
+	}else{
+		header("Location: index.php");
+		exit();
+	}
+	if(isset($_POST['commentSubmit'])) {
+		setComment($userID,$tpID, date('Y-m-d H:i:s'), $_POST['commentContent']);
+	}
+	if(isset($_POST['repliedID'])){
+		setReply($userID,$tpID,date('Y-m-d H:i:s'),$_POST['replyContent'.$repliedID],$_POST['repliedID']);
+	}
+	if(isset($_POST['like'])){
 		$authorID = $_POST['$auhtorID'];
 		if($_POST['like'] == 'like'){
-			$time = date('Y-m-d H:i:s');
-			dataConnection::runQuery("INSERT INTO user_likes_teachingpractice (user_id, teachingpractice_id, time)
-			VALUES ('$userID','$tpID','$time') ");
-
+			setLike($userID,$tpID, date('Y-m-d H:i:s'));
 		}if($_POST['like'] == 'unlike'){
-			dataConnection::runQuery("DELETE FROM user_likes_teachingpractice WHERE user_id = '$userID' AND teachingpractice_id = '$tpID'");
+			deleteLike($userID,$tpID);
 		}
 	}
 
@@ -64,8 +60,7 @@ else {
 
 	// Teaching Practice
 
-	$teachingPractice = dataConnection::runQuery("SELECT u.id, u.name, u.lastname, u.username, tp.* FROM user AS u
-		INNER JOIN teachingpractice AS tp ON u.id = tp.author_id WHERE tp.id = '{$tpID}'");
+	$teachingPractice = getTeachingPractice($tpID);
 
 	$template->pageData['mainBody'] .= "<h2>Teaching Practice</h2>";
 	$template->pageData['mainBody'] .= "<div id='teachingPractice'>";
@@ -113,8 +108,7 @@ else {
 	$template->pageData['mainBody'] .= "</div>";
 
 	//Like Button
-	$query = "SELECT * FROM user_likes_teachingpractice WHERE teachingpractice_id = '$tpID'";
-	$likes =  dataConnection::runQuery($query);
+	$likes =  getLikes($tpID);
 	$count = 0;
 	$liked = false;
 	foreach($likes as $l){
@@ -134,8 +128,7 @@ else {
 
 
 	//Comments
-	$query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tpID' AND reply IS NULL";
-	$comments =  dataConnection::runQuery($query);
+	$comments =  getComments($tpID);
 
 	if($comments != false) {
 		$template->pageData['mainBody'] .= "<h2>Comments:</h2>";
@@ -146,7 +139,7 @@ else {
 
 			$template->pageData['mainBody'] .= "<img src=" . getAvatarURL($c['user_id']) . "  />";
 
-			$template->pageData['mainBody'] .= "<a href='/prototype_nb1/user_profile.php?profile={$postuser->id}'>{$postuser->name} {$postuser->lastname}({$postuser->username})</a>";
+			$template->pageData['mainBody'] .= "<a href='user_profile.php?profile={$postuser->id}'>{$postuser->name} {$postuser->lastname}({$postuser->username})</a>";
 			$template->pageData['mainBody'] .= "{$c['comment']}";
 			$template->pageData['mainBody'] .= "{$c['time']} ";
 			$template->pageData['mainBody'] .= "<button id='replyButton{$c['id']}'>Reply</button>";
@@ -170,8 +163,7 @@ else {
 												});
            										</script>";
 			$cID = $c['id'];
-			$query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tpID' AND reply = '$cID'";
-			$replies = dataConnection::runQuery($query);
+			$replies = getComments($tpID,$commentID);
 
 			foreach ($replies as $r) {
 				$template->pageData['mainBody'] .= "<div id='reply'>";
@@ -180,7 +172,7 @@ else {
 
 				$template->pageData['mainBody'] .= "<img src=" . getAvatarURL($r['user_id']) . "  />";
 
-				$template->pageData['mainBody'] .= "<a href='/prototype_nb1/user_profile.php?profile={$postuser->id}'>{$postuser->name} {$postuser->lastname}({$postuser->username})</a>";
+				$template->pageData['mainBody'] .= "<a href='user_profile.php?profile={$postuser->id}'>{$postuser->name} {$postuser->lastname}({$postuser->username})</a>";
 				$template->pageData['mainBody'] .= "{$r['comment']}";
 				$template->pageData['mainBody'] .= "{$r['time']} ";
 				$template->pageData['mainBody'] .= "</div>";

@@ -35,8 +35,7 @@ if($uinfo==false)
 
 else {
 
-    $teachingPractice = dataConnection::runQuery("SELECT tp.time, tp.title, tp.id, tp.author_id, u.username, u.name,
-      u.lastname FROM teachingpractice AS tp,user as u where tp.author_id = u.id ");
+    $teachingPractice = getTeachingPractices();
 
     $template->pageData['mainBody'] .= "<h2>Browse Teaching Practices</h2>";
     $template->pageData['mainBody'] .= "<div id='browse'>";

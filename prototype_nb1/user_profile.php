@@ -25,10 +25,13 @@ if($uinfo==false)
 }
 else
 {
-	if(isset($_GET['profile']))
-	    $profile = $_GET['profile'];
-	else
+	if(isset($_GET['profile'])) {
+		$profile = $_GET['profile'];
+	}else{
 		header("Location: index.php");
+		exit();
+	}
+
 
 	//Menu
 	$template->pageData['sideInfo'] .= "<h2> Menu </h2>";
@@ -43,13 +46,13 @@ else
 
 	//Profile
 	$template->pageData['mainBody'] .= "<h2>User Information</h2><ul>";
-	$user = dataConnection::runQuery("SELECT * FROM user WHERE id = '$profile';");
+	$user = getUserInfo($profile);
 
 	$template->pageData['mainBody'] .= "<div id='profile'>";
 	if($user != false) {
 		foreach($user as $u) {
 			$points = totalPoints($u['id']);
-			$template->pageData['mainBody'] .= "<img src=" . getAvatarURL($userID) . "  />";
+			$template->pageData['mainBody'] .= "<img src=" . getAvatarURL($u['id']) . "  />";
 			if ($profile == $userID) $template->pageData['mainBody'] .= "<form action='uploadAvatar.php' method='post' enctype='multipart/form-data'><input type='hidden' name='userID' value='$userID'/><input type='file' name='avatar' size='25' /><br/><input type='submit' name='upload' value='Upload Avatar'/><sub>(size less than 1MB)</sub></form>";
 			$template->pageData['mainBody'] .= "<table>";
 			$template->pageData['mainBody'] .= "<tr class='alt'><td>Username</td><td>{$u['username']}</td></tr>";

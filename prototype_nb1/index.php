@@ -43,8 +43,7 @@ else
 
 	//Badges
 	$template->pageData['mainBody'].= "<div id='badges'>";
-	$query = "SELECT * FROM badge, user_earns_badge, user WHERE user_earns_badge.user_id = user.id AND user.username = '$username' AND badge.id = user_earns_badge.badge_id;";
-	$badges =  dataConnection::runQuery($query);
+	$badges = getEarnedBadges($userID);
 	$template->pageData['mainBody'] .= "<h2>My Badges</h2>";
 	if($badges != false){
 			foreach($badges as $b)
@@ -99,16 +98,11 @@ else
 	//Latest Teaching Practices
 	$template->pageData['mainBody'].= "<div id='latestTeachingPractices'>";
 	$template->pageData['mainBody'] .= "<br><h2>Latest Teaching Practices</h2>";
-	$query = "SELECT * FROM teachingpractice ORDER BY id DESC";
-	$bundles = dataConnection::runQuery($query);
-	if($bundles !== false) {
+	$bundles = getLatestTeachingPractices(5);
+	if($bundles != false) {
 		$template->pageData['mainBody'] .="<ul>";
-		$counter = 0;
-		$max = 5;
 		foreach($bundles as $b) {
 			$template->pageData['mainBody'] .= "<li><a href='view_teaching_practice.php?tpID= {$b['id']} '>{$b['title']}</a></li>";
-			$counter++;
-			if ($counter > ($max - 1)) break;
 		}
 		$template->pageData['mainBody'] .= "</ul>";
 	} else {

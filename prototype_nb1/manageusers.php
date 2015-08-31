@@ -33,8 +33,7 @@ if($uinfo==false || $dbUser->isadmin == false)
 
 else
 {
-    $query = "SELECT * FROM user";
-    $users =  dataConnection::runQuery($query);
+    $users =  getUsers();
 
     $template->pageData['mainBody'] .= "<h2>List Of Users</h2>";
     $template->pageData['mainBody'] .= "<div id='manageUsers'>";
@@ -81,16 +80,14 @@ else
 
     if (isset($_POST['change'])) {
         $id = $_POST['id'];
-        $query = "UPDATE user SET isadmin = NOT isadmin WHERE id = '$id' ";
-        dataConnection::runQuery($query);
+        changeUserType($id);
         header("Location: manageusers.php");
         exit();
     }
 
     if (isset($_POST['delete'])) {
         $id = $_POST['id'];
-        $query = "DELETE FROM user  WHERE id = '$id'";
-        dataConnection::runQuery($query);
+        deleteUser($id);
         header("Location: manageusers.php");
         exit();
     }

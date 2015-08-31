@@ -10,8 +10,7 @@ $dbUser = getUserRecord($uinfo);
 $userID = $dbUser->id;
 
     $id = $_POST['id'];
-    $query = "DELETE FROM teachingpractice  WHERE id = '$id'";
-    dataConnection::runQuery($query);
+    deleteTeachingPractice($id);
     header("Location: index.php");
     exit();
 ?>
