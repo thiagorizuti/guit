@@ -53,7 +53,7 @@ else {
 
     foreach($teachingPractice as $tp){
             $template->pageData['mainBody'] .= "<tr><td class='date'>".date("d/m/Y",strtotime($tp["time"]))."</td>
-            <td class='title'><a href='view_teaching_practice.php?title={$tp['title']}&tpID={$tp['id']}}'>{$tp['title']}</a></td>
+            <td class='title'><a href='view_teaching_practice.php?title={$tp['title']}&tpID={$tp['id']}'>{$tp['title']}</a></td>
             <td class='author'><a href='/user_profile.php?username={$tp['username']}&profile={$tp['author_id']}'>{$tp['name']} {$tp['lastname']} ({$tp['username']})</a></td></tr>";
     }
     $template->pageData['mainBody'] .= "</tbody>";

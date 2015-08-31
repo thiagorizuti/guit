@@ -151,7 +151,7 @@ function getLikes($tpID){
 }
 
 function getComments($tpID){
-    $query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tpID' AND reply IS NULL";
+    $query = "SELECT * FROM user_comments_teachingpractice WHERE teachingpractice_id = '$tpID' AND reply IS NULL ORDER BY time";
     $comments =  dataConnection::runQuery($query);
     return $comments;
 }

@@ -35,7 +35,7 @@ if($uinfo==false)
 }
 
 else {
-	if (isset($_GET['tpID'])){
+	if (isset($_GET['tpID']) && is_numeric($_GET['tpID']) && $_GET['tpID'] >= 0){
 		$tpID = $_GET['tpID'];
 	}else{
 		header("Location: index.php");
@@ -162,8 +162,8 @@ else {
 													swapElements('replyButton{$c['id']}','replyForm{$c['id']}');
 												});
            										</script>";
-			$cID = $c['id'];
-			$replies = getComments($tpID,$commentID);
+			$commentID = $c['id'];
+			$replies = getReplies($tpID,$commentID);
 
 			foreach ($replies as $r) {
 				$template->pageData['mainBody'] .= "<div id='reply'>";

@@ -25,7 +25,7 @@ if($uinfo==false)
 }
 else
 {
-	if(isset($_GET['profile'])) {
+	if(isset($_GET['profile']) && is_numeric($_GET['profile']) && $_GET['profile'] >= 0) {
 		$profile = $_GET['profile'];
 	}else{
 		header("Location: index.php");
